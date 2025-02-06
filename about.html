@@ -1,34 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>vaiswanara</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- ...existing code... -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 100px; /* Set the width of the logo */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .site-title {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .nav-menu {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .nav-menu a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .separator {
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        @media (max-width: 600px) {
+            .logo {
+                width: 50px; /* Adjust the width for smaller screens */
+            }
+            .nav-menu a {
+                display: block;
+                margin: 5px 0;
+            }
+            .content {
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>VAISWANARA</h1>
-        <p>॥ साधनात् साध्यतॆ सर्वम् ॥/p>
-    </header>
+    <img src="logo.jpeg" alt="Logo" class="logo">
+    <div class="site-title">
+        <h1>vaiswanara.com</h1>
+    </div>
+    <div class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="epata.html">e-PATA</a>
+        <a href="donate.html">Donate</a>
+    </div>
+    <div class="separator"></div>
 
-    <!-- Navigation Menu -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="epata.html">e-PATA</a></li>
-            <li><a href="donate.html">Donate</a></li>
-        </ul>
-    </nav>
+    <div class="content">
+        <h1>About Me</h1>
+        <p>Namaste! I am Srikanth Dharmavaram (Vaiswanara), a passionate trainer dedicated to empowering individuals through the timeless wisdom of Vedic Astrology and its integration with psychology. My teaching approach combines ancient scriptures like the Bhagavad Gita, Upanishads, and Puranas with practical applications to create a balanced and holistic understanding of life.</p>
 
-    <!-- About Me Section -->
-    <section id="about-me">
-        <h2>About Me!</h2>
-        <p>I am <strong>Srikanth Dharmavaram (Vaiswanara)</strong>, a passionate trainer dedicated to empowering individuals through the timeless wisdom of Vedic Astrology and its integration with psychology. My teaching approach combines ancient scriptures like the Bhagavad Gita, Upanishads, and Puranas with practical applications to create a balanced and holistic understanding of life.</p>
-
-        <h3>My Mission</h3>
+        <h2>My Mission</h2>
         <p>I believe that Vedic knowledge should be shared freely and without barriers. My mission is to help students:</p>
         <ul>
             <li>Understand the profound truths of Vedic Astrology and psychology.</li>
@@ -36,34 +73,35 @@
             <li>Achieve harmony in modern life by fostering peace and clarity in thought and action.</li>
         </ul>
 
-        <h3>What I Offer</h3>
-        <p><strong>Vedic Astrology Classes</strong></p>
+        <h2>What I Offer</h2>
+        <h3>Vedic Astrology Classes</h3>
         <ul>
             <li>Conducted every Sunday at 7:30 AM IST via Google Meet.</li>
             <li>A structured course covering 100+ topics, available as free YouTube sessions.</li>
             <li>Practical lessons to empower students to protect themselves from exploitation and uncover life’s deeper purpose.</li>
         </ul>
-        <p><strong>Psychology Relevant to Astrology via Google Meet</strong></p>
+
+        <h3>Psychology Relevant to Astrology via Google Meet</h3>
         <ul>
             <li>Conducted every Saturday at 7:30 AM IST.</li>
             <li>Integrates teachings from the Bhagavad Gita, Upanishads, and Puranas with modern psychology.</li>
             <li>Focuses on strengthening the mind, improving self-restraint, building confidence, and achieving peace in life.</li>
         </ul>
 
-        <h3>My Beliefs</h3>
+        <h2>My Beliefs</h2>
         <p>I encourage students to focus on the knowledge and insights gained through my courses. There is no need to subscribe, like, or share my videos or page. Instead, I am happiest when students apply what they’ve learned and share their knowledge with others, creating a ripple effect of wisdom.</p>
 
-        <h3>A Charitable Initiative</h3>
+        <h2>A Charitable Initiative</h2>
         <p>All my classes and materials are completely free of charge. This initiative is supported by optional donations, which help me cover basic living expenses such as groceries, utilities, and internet services. Your support ensures the continuation of these free programs for all.</p>
 
-        <h3>Join Me on This Journey</h3>
+        <h2>Join Me on This Journey</h2>
         <p>Whether you are looking to explore the depths of Vedic Astrology or seeking practical insights to strengthen your mind and improve your life, I invite you to embark on this transformative journey with me. Together, let’s learn how to live with purpose, clarity, and peace in today’s complex world.</p>
 
-        <p>With Gratitude,<br>Srikanth Dharmavaram (Vaiswanara)<br><em>Vedic Astrology Trainer & Guide</em></p>
-    </section>
+        <p style="text-align: right;">With Gratitude,<br>
+            Srikanth Dharmavaram (Vaiswanara)<br>
+            Vedic Astrology Trainer & Guide</p>
+    </div>
 
-    <!–<footer>
-        <p>© 2025 Srikanth Dharmavaram. All Rights Reserved.</p>
-    </footer>–>
+    <!-- ...existing code... -->
 </body>
 </html>

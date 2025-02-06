@@ -1,36 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>vaiswanara</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <!-- ...existing code... -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 100px; /* Set the width of the logo */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .site-title {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .nav-menu {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .nav-menu a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .separator {
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        @media (max-width: 600px) {
+            .logo {
+                width: 50px; /* Adjust the width for smaller screens */
+            }
+            .nav-menu a {
+                display: block;
+                margin: 5px 0;
+            }
+            .content {
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>VAISWANARA</h1>
-        <p>॥ साधनात् साध्यतॆ सर्वम् ॥</p>
-    </header>
+    <img src="logo.jpeg" alt="Logo" class="logo">
+    <div class="site-title">
+        <h1>vaiswanara.com</h1>
+    </div>
+    <div class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="epata.html">e-PATA</a>
+        <a href="donate.html">Donate</a>
+    </div>
+    <div class="separator"></div>
 
-    <!-- Navigation Menu -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="epata.html">e-PATA</a></li>
-            <li><a href="donate.html">Donate</a></li>
-        </ul>
-    </nav>
+    <div class="content">
+        <h3><center>Welcome to My Home Page</center></h3>
+        <p>This is an alternate website hosted on GitHub Pages. In the event that my main website (<a href="http://vaiswanara.com">http://vaiswanara.com</a>) is unavailable due to technical issues, server connectivity problems, or domain name renewal issues, students can access all necessary information and resources from this alternative site.</p>
+        <p>I am committed to ensuring that your learning experience remains uninterrupted. Please bookmark this page and use it as a backup resource whenever needed.</p>
+        <p>Thank you for your understanding and continued support.</p>
+        <p style="text-align: right;">With Gratitude,<br>
+        Srikanth Dharmavaram (Vaiswanara)<br>
+        Vedic Astrology Trainer & Guide</p>
+    </div>
 
-    <!-- Blog Post Section -->
-    <section id="blog-posts">
-        <ul id="post-list">
-            <!-- Posts will be dynamically loaded here -->
-        </ul>
-    </section>
-
-
+    <!-- Add your content here -->
+    <!-- ...existing code... -->
 </body>
 </html>
