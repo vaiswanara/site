@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ...existing code... -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 100px; /* Set the width of the logo */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .site-title {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .nav-menu {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .nav-menu a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .separator {
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        @media (max-width: 600px) {
+            .logo {
+                width: 50px; /* Adjust the width for smaller screens */
+            }
+            .nav-menu a {
+                display: block;
+                margin: 5px 0;
+            }
+            .content {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="logo.jpeg" alt="Logo" class="logo">
+    <div class="site-title">
+        <h1>vaiswanara.com</h1>
+    </div>
+    <div class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="blog.html">My Blog</a>
+        <a href="about.html">About</a>
+        <a href="epata.html">e-PATA</a>
+        <a href="donate.html">Donate</a>
+    </div>
+    <div class="separator"></div>
+
+    <div class="content">
+        <h1>My Blog</h1>
+        <div id="posts"></div>
+
+        <script>
+            const repo = "your-username/my-blog"; // Replace with your repo name
+            fetch(`https://api.github.com/repos/${repo}/issues?state=open`)
+                .then(response => response.json())
+                .then(issues => {
+                    let html = "";
+                    issues.forEach(issue => {
+                        html += `<h2>${issue.title}</h2>
+                                 <p>${issue.body}</p>
+                                 <hr>`;
+                    });
+                    document.getElementById("posts").innerHTML = html;
+                })
+                .catch(error => console.error("Error fetching posts:", error));
+        </script>
+    </div>
+
+    <!-- Add your content here -->
+    <!-- ...existing code... -->
+</body>
+</html>
