@@ -1,0 +1,72 @@
+APPs
+1) Time of Birth Converter(Ghatis to Hours)
+•	This webpage allows users to convert Time Ghati-Phalas into HH:mm:ss and HH:mm:ss into Ghatis-Phalas
+•	Date, Sunrise time is must
+•	Ghati-Phala calculated from Sunrise time not mid-night 12 AM
+2) Panchanga Shudhi & Tarabhala
+•	This webpage allows users to upload a Panchanga Excel file(prepared from Jaganatha Hora Data).
+•	It filter data based on dates, and calculate Panchanga Shudhi
+•	It calculates Tarabala for two individuals based on their Nakshatras.
+You may download Sample Panchanga Excel file (PANCHANGA-2025-26-27 Location: Bangalore)
+3) Graha Role Mapping Sheet
+•	This webpage allows students to Study different planetary combinations
+•	Understand house-planet relationships
+•	Learn about lordship principles
+•	Master aspect calculations
+readme
+4) Dasha Calculation
+•	This App Demonstrates the Vimshottari Dasha system step by step (nakshatra identification, balance calculation, mahadasha → bhukti breakdown).
+•	Connects abstract astrological rules to concrete numeric computation and date arithmetic.
+5) Jataka-Dasha-Gochara
+•	This app contain JATAKA-DASHE-GOCHARA Apps.
+•	In the Transit section the Navigator WebApp turns raw planetary transit (Gochara) JSON data into an interactive, visual, and testable format.
+•	It helps students quickly explore Panchanga and transit effects by date and by Janma Rashi, making it easier to compare days, validate calculations, and practice interpretation.
+•	Use the Transit Navigator web app to quickly explore Panchanga and planetary transit data.
+•	Download the provided Gochara JSON file(optional), upload it in the app, choose your Janma Rashi, and inspect the Panchanga and Phala results for your assigned dates.
+•	The app runs in the browser — no account or server upload required.
+•	You can download json file that contains following planetery data from the following periods(if required)
+o	01-01-2031_To_31-12-2035.json
+o	01-01-2036_To_31-12-2039.json
+o	01-01-2040_To_31-12-2045.json
+o	01-01-2046_To_31-12-2050.json
+•	To view the Gochara Phala for a particular rashi from Start-Date to EndDate with integrated ephemeries data CLICK HERE.….
+6) Double Transit Marriage Timing Analyzer
+•	This web app helps students understand marriage timing using classical Vedic astrology principles.
+•	It analyzes Natal chart + Transit (Gochara) positions of Guru and Shani.
+•	It checks Double Transit activation of 7th house, Lagna, and Janma Rashi.
+•	It evaluates whether current Dasha–Antardasha–Pratyantara periods support marriage.
+•	It presents results in a structured diagnostic table for easy learning and research.
+•	Useful for students to practice event timing logic in a systematic way.
+👉 Ideal for: Learning how Transit and Dasha work together in predicting marriage events.
+
+
+1) Time of Birth Converter(Ghatis to Hours) 
+https://vaiswanara.github.io/time
+
+2) Panchanga Shudhi & Tarabhala
+https://vaiswanara.github.io/panchanga/
+
+3) Graha Role Mapping Sheet
+https://vaiswanara.github.io/read_horoscope/
+
+4) Dasha Calculation
+https://vaiswanara.github.io/dasha/
+
+5) Jataka-Dasha-Gochara
+https://vaiswanara.github.io/apps/
+
+6) Double Transit Marriage Timing Analyzer
+https://vaiswanara.github.io/dt/
+
+
+o	01-01-2031_To_31-12-2035.json
+https://drive.google.com/file/d/1Y-H36eAO9SyEGlK3FCjgvxYiqQjvpd6C/view?usp=drive_link
+
+o	01-01-2036_To_31-12-2039.json
+https://drive.google.com/file/d/1bdhLl4wxLubY0YAbumhOwmlrzw1vvsGf/view?usp=drive_link
+
+o	01-01-2040_To_31-12-2045.json
+https://drive.google.com/file/d/1IuSABYO4uB5XJd-lhQVZ23q2AaBEZTfB/view?usp=drive_link
+
+o	01-01-2046_To_31-12-2050.json
+https://drive.google.com/file/d/1GqpwjTDnHVb9ONqeaastgZL0GU3i3xhG/view?usp=drive_link
