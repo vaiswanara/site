@@ -1,46 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ...existing code... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>WebApps - vaiswanara.com</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <style>
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 10px;
+            min-height: 100vh;
+            -webkit-text-size-adjust: 100%;
+        }
         .logo {
             display: block;
             margin: 0 auto;
-            width: 100px; /* Set the width of the logo */
-            height: auto; /* Maintain aspect ratio */
+            width: 80px;
+            height: auto;
+            max-width: 100%;
         }
         .site-title {
             text-align: center;
             margin-top: 10px;
         }
+        .site-title h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: #333;
+        }
         .nav-menu {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
         }
         .nav-menu a {
-            margin: 0 10px;
+            margin: 4px 6px;
             text-decoration: none;
             color: #007BFF;
+            font-size: 0.95rem;
+            padding: 8px 12px;
+            border-radius: 6px;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            touch-action: manipulation;
+        }
+        .nav-menu a:active {
+            background-color: #e3f2fd;
         }
         .separator {
             border-top: 1px solid #ccc;
-            margin: 20px 0;
+            margin: 15px 0;
         }
         .content {
             max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
+            padding: 15px;
+            line-height: 1.7;
+            font-size: 1rem;
         }
         .page-intro {
             text-align: center;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
+        }
+        .page-intro h1 {
+            font-size: 1.5rem;
+            margin: 0 0 10px 0;
+            color: #333;
         }
         .page-intro p {
             margin: 6px 0 0 0;
             color: #555;
+            font-size: 0.95rem;
         }
         .apps-grid {
             display: grid;
@@ -54,50 +95,105 @@
             background: #fafafa;
         }
         .app-card h2 {
-            margin: 0 0 6px 0;
-            font-size: 1.15rem;
+            margin: 0 0 8px 0;
+            font-size: 1.05rem;
             color: #222;
+            line-height: 1.4;
+        }
+        .app-card h2 a {
+            color: #007bff;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        .app-card h2 a:active {
+            color: #0056b3;
         }
         .app-card p {
-            margin: 8px 0 0 0;
+            margin: 10px 0 0 0;
+            font-size: 0.95rem;
         }
         .app-card ul {
-            margin: 8px 0 0 18px;
+            margin: 10px 0 0 18px;
+            font-size: 0.95rem;
+        }
+        .app-card li {
+            margin-bottom: 6px;
+            line-height: 1.5;
         }
         .pill {
             display: inline-block;
-            font-size: 0.85rem;
-            padding: 2px 10px;
+            font-size: 0.8rem;
+            padding: 3px 10px;
             border-radius: 999px;
             background: #eef3ff;
             color: #1f4ed8;
-            margin-left: 8px;
+            margin-left: 6px;
             vertical-align: middle;
+            white-space: nowrap;
         }
         .note {
             margin-top: 12px;
-            padding: 10px 12px;
+            padding: 12px;
             background: #f5f7fb;
             border-left: 4px solid #8aa4ff;
             border-radius: 6px;
             color: #333;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
         .sub-list {
-            margin: 8px 0 0 18px;
+            margin: 10px 0 0 18px;
         }
         .sub-list li {
             list-style-type: lower-alpha;
+            margin-bottom: 6px;
         }
-        @media (max-width: 600px) {
+        .sub-list a {
+            color: #007bff;
+            word-break: break-all;
+            font-size: 0.9rem;
+        }
+        /* Mobile optimizations */
+        @media (max-width: 480px) {
+            body {
+                padding: 8px;
+            }
             .logo {
-                width: 50px; /* Adjust the width for smaller screens */
+                width: 60px;
+            }
+            .site-title h1 {
+                font-size: 1.3rem;
             }
             .nav-menu a {
-                display: block;
-                margin: 5px 0;
+                font-size: 0.9rem;
+                padding: 10px 14px;
+                margin: 3px 4px;
             }
             .content {
                 padding: 10px;
+            }
+            .page-intro h1 {
+                font-size: 1.35rem;
+            }
+            .app-card {
+                padding: 14px;
+            }
+            .app-card h2 {
+                font-size: 0.95rem;
+            }
+            .pill {
+                font-size: 0.75rem;
+                margin-left: 4px;
+                margin-top: 4px;
+            }
+        }
+        /* Tablet */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .logo {
+                width: 70px;
+            }
+            .content {
+                padding: 12px;
             }
         }
     </style>
@@ -140,7 +236,7 @@
                     <li>Filter data by date and calculate Panchanga Shudhi.</li>
                     <li>Calculate Tarabala for two individuals based on their Nakshatras.</li>
                 </ul>
-                <p class="note">👉 Sample Panchanga Excel file available: PANCHANGA-2025-26-27 (Location: Bangalore).</p>
+                <p class="note">Sample Panchanga Excel file available: PANCHANGA-2025-26-27 (Location: Bangalore).</p>
             </section>
 
             <section class="app-card">
@@ -162,21 +258,21 @@
             </section>
 
             <section class="app-card">
-                <h2><a href="https://vaiswanara.github.io/apps/" target="_blank" rel="noopener noreferrer">5. Jataka-Dasha-Gochara</a></h2>
+                <h2><a href="https://vaiswanara.github.io/jdg/" target="_blank" rel="noopener noreferrer">5. Jataka-Dasha-Gochara</a></h2>
                 <ul>
                     <li>Includes Jataka, Dasha, and Gochara tools.</li>
                     <li>Transit Navigator turns raw planetary transit (Gochara) JSON data into an interactive format.</li>
                     <li>Explore Panchanga and transit effects by date and Janma Rashi for easy comparison and practice.</li>
                     <li>Runs in the browser &mdash; no account or server upload required.</li>
                 </ul>
-                <p>👉 Optional JSON data periods:</p>
+                <p>Optional JSON data periods:</p>
                 <ul class="sub-list">
                     <li><a href="https://drive.google.com/file/d/1Y-H36eAO9SyEGlK3FCjgvxYiqQjvpd6C/view?usp=drive_link" target="_blank" rel="noopener noreferrer">01-01-2031_to_31-12-2035.json</a></li>
                     <li><a href="https://drive.google.com/file/d/1bdhLl4wxLubY0YAbumhOwmlrzw1vvsGf/view?usp=drive_link" target="_blank" rel="noopener noreferrer">01-01-2036_to_31-12-2039.json</a></li>
                     <li><a href="https://drive.google.com/file/d/1IuSABYO4uB5XJd-lhQVZ23q2AaBEZTfB/view?usp=drive_link" target="_blank" rel="noopener noreferrer">01-01-2040_to_31-12-2045.json</a></li>
                     <li><a href="https://drive.google.com/file/d/1GqpwjTDnHVb9ONqeaastgZL0GU3i3xhG/view?usp=drive_link" target="_blank" rel="noopener noreferrer">01-01-2046_to_31-12-2050.json</a></li>
                 </ul>
-                <p class="note">👉 To view Gochara Phala for a particular Rashi from start date to end date with integrated ephemeris data, use the provided link in the app.</p>
+                <p class="note">To view Gochara Phala for a particular Rashi from start date to end date with integrated ephemeris data, use the provided link in the app.</p>
             </section>
 
             <section class="app-card">
@@ -188,11 +284,9 @@
                     <li>Evaluates whether Dasha &ndash; Antardasha &ndash; Pratyantara periods support marriage.</li>
                     <li>Presents results in a structured diagnostic table for learning and research.</li>
                 </ul>
-                <p class="note">👉 Ideal for: Learning how transit and dasha work together in predicting marriage events.</p>
+                <p class="note">Ideal for: Learning how transit and dasha work together in predicting marriage events.</p>
             </section>
         </div>
     </div>
-
-    <!-- ...existing code... -->
 </body>
 </html>

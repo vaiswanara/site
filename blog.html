@@ -1,49 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ...existing code... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Blog - vaiswanara.com</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <style>
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 10px;
+            min-height: 100vh;
+            -webkit-text-size-adjust: 100%;
+        }
         .logo {
             display: block;
             margin: 0 auto;
-            width: 100px; /* Set the width of the logo */
-            height: auto; /* Maintain aspect ratio */
+            width: 80px;
+            height: auto;
+            max-width: 100%;
         }
         .site-title {
             text-align: center;
             margin-top: 10px;
         }
+        .site-title h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: #333;
+        }
         .nav-menu {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
         }
         .nav-menu a {
-            margin: 0 10px;
+            margin: 4px 6px;
             text-decoration: none;
             color: #007BFF;
+            font-size: 0.95rem;
+            padding: 8px 12px;
+            border-radius: 6px;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            touch-action: manipulation;
+        }
+        .nav-menu a:active {
+            background-color: #e3f2fd;
         }
         .separator {
             border-top: 1px solid #ccc;
-            margin: 20px 0;
+            margin: 15px 0;
         }
         .content {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
+            padding: 15px;
+            line-height: 1.7;
+            font-size: 1rem;
         }
-        @media (max-width: 600px) {
+        .content h1 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .content h2 {
+            font-size: 1.2rem;
+            color: #444;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .content hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        #posts {
+            word-wrap: break-word;
+        }
+        /* Mobile optimizations */
+        @media (max-width: 480px) {
+            body {
+                padding: 8px;
+            }
             .logo {
-                width: 50px; /* Adjust the width for smaller screens */
+                width: 60px;
+            }
+            .site-title h1 {
+                font-size: 1.3rem;
             }
             .nav-menu a {
-                display: block;
-                margin: 5px 0;
+                font-size: 0.9rem;
+                padding: 10px 14px;
+                margin: 3px 4px;
             }
             .content {
                 padding: 10px;
+                font-size: 0.95rem;
+            }
+            .content h1 {
+                font-size: 1.35rem;
+            }
+            .content h2 {
+                font-size: 1.1rem;
+            }
+        }
+        /* Tablet */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .logo {
+                width: 70px;
+            }
+            .content {
+                padding: 12px;
             }
         }
     </style>
@@ -68,7 +150,7 @@
         <div id="posts"></div>
 
         <script>
-            const repo = "vaiswanara/site"; // Replace with your repo name
+            const repo = "vaiswanara/site";
             fetch(`https://api.github.com/repos/${repo}/issues?state=open`)
                 .then(response => response.json())
                 .then(issues => {
@@ -83,11 +165,5 @@
                 .catch(error => console.error("Error fetching posts:", error));
         </script>
     </div>
-
-    <!-- Add your content here -->
-    <!-- ...existing code... -->
 </body>
 </html>
-
-
-
